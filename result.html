@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information - Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4682b4;
+        }
+
+        .info {
+            margin-bottom: 20px;
+        }
+
+        .info p {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #006400; /* Dark green */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Information - Result</h1>
+        <div class="info">
+            <p>Marks:<span class="highlight">{{ student_data[0] }}</span></p>
+            <p>Result: <span class="highlight"> {{ student_data[1] }}</span></p>
+            <p>Year of examination: <span class="highlight"> {{ student_data[2] }}</span></p>
+        </div>
+    </div>    
+</body>
+</html>
