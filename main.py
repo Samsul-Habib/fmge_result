@@ -1,10 +1,5 @@
 from bottle import Bottle, request, template
 import pandas as pd
-import socket    #this module searches the local IP address of machine
-s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-# connect() for UDP doesn't send packets
-s.connect(('10.0.0.0', 0))
-bbb=s.getsockname()[0]
 app = Bottle()
 df = pd.read_csv('out.txt', header=None, delimiter=',')
 
@@ -32,6 +27,4 @@ def fetch_data():
         return '<p style="font-size: 20px; color: red;">Roll number not found</p>'
 
 if __name__ == '__main__':
-    #app.run(debug=True)
-    #Bottle.run(app, host=bbb, port=8080)
     Bottle.run(app, host='0.0.0.0', port=8080)
